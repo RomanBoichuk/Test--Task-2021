@@ -9,7 +9,6 @@
       </ul>
       <button>Add</button>
     </form>
-    <AddList text="adgfja"/>
   </div>
 </template>
 

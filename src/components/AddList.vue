@@ -1,14 +1,20 @@
 <template>
-  <div class="home">
+  <button class="mainButton" @click="showform">
     {{ text }}
-  </div>
+  </button>
 </template>
 
 <script>
+// import { mapState } from 'vuex'
 export default {
   name: 'AddList',
   props: {
     text: String
+  },
+  methods: {
+    showform () {
+      this.$store.dispatch('showAFORMS')
+    }
   }
 }
 </script>
