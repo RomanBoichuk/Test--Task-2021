@@ -1,6 +1,5 @@
 <template>
   <div>
-    <TaskForm />
     <MainForm v-show="showform"/>
     <AddList :text= "AddTODOlist" />
   </div>
@@ -11,15 +10,13 @@
 
 import AddList from '@/components/AddList.vue'
 import MainForm from '@/components/MainForm.vue'
-import TaskForm from '@/components/TaskForm.vue'
 import { mapState } from 'vuex'
 
 export default {
   name: 'Home',
   components: {
     AddList,
-    MainForm,
-    TaskForm
+    MainForm
   },
   data () {
     return {
