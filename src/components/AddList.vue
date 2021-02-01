@@ -13,7 +13,7 @@ export default {
   },
   methods: {
     showform () {
-      this.$store.dispatch('showAFORMS')
+      this.$store.dispatch('showFORM')
     }
   }
 }

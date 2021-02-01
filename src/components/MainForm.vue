@@ -2,7 +2,7 @@
   <div class="mainForm">
     <div class="form-plus"></div>
     <input type="text" placeholder="введіть завдання" v-model='formtask'>
-    <button @click.prevent="addform">{{AddForm}}</button>
+    <button @click.prevent="addMainform">{{AddForm}}</button>
   </div>
 </template>
 
@@ -17,10 +17,13 @@ export default {
     }
   },
   methods: {
-    addform () {
-      this.$store.dispatch('showMainTask', this.formtask)
+    addMainform () {
+      // this.FormTask.push({ name: this.formtask })
+      // this.$store.dispatch('addNEWFORM', this.FormTask)
+      this.$store.dispatch('showMainForm', this.formtask)
       this.formtask = ''
-      this.$store.dispatch('showAFORMS')
+      // console.log(this.$store.state.taskMainForm)
+      this.$store.dispatch('showFORM')
     }
   },
   computed: {

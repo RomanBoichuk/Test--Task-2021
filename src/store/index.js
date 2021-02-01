@@ -9,19 +9,25 @@ export default new Vuex.Store({
     taskMainForm: []
   },
   mutations: {
-    SHOW_FORMS (state) {
+    SHOW_FORM (state) {
       state.showform = !state.showform
     },
-    SHOW_MAINTASK (state, formtask) {
+    SHOW_MAINFORM (state, formtask) {
       state.taskMainForm.push(formtask)
+    },
+    ADD_NEWFORM (state, payload) {
+      state.formtask = payload
     }
   },
   actions: {
-    showAFORMS ({ commit }) {
-      commit('SHOW_FORMS')
+    showFORM ({ commit }) {
+      commit('SHOW_FORM')
     },
-    showMainTask ({ commit }, formtask) {
-      commit('SHOW_MAINTASK', formtask)
+    showMainForm ({ commit }, formtask) {
+      commit('SHOW_MAINFORM', formtask)
+    },
+    addNEWFORM ({ commit }, payload) {
+      commit('ADD_NEWFORM', payload)
     }
   },
   modules: {
