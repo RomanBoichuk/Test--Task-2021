@@ -1,11 +1,11 @@
 <template>
   <div class="mainForm">
     <ul>
-      <li v-for="(title, index) in taskMainForm" v-bind:key="index">
+      <li v-for="(title, index) in MainForm" v-bind:key="index">
         {{ title.title }}
         <div class="form-plus"></div>
         <input type="text" placeholder="введіть завдання" v-model='formtask'>
-        <button @click.prevent="addMainform">{{AddForm}}</button>
+        <button @click.prevent="addMainform">{{AddTask}}</button>
       </li>
     </ul>
   </div>
@@ -16,24 +16,13 @@ import { mapState } from 'vuex'
 export default {
   data () {
     return {
-      AddForm: 'ADD FRORM',
-      formtask: '',
-      FormTask: []
+      AddTask: 'ADD TASK',
+      formtask: ''
     }
   },
-  // methods: {
-  //   addMainform () {
-  //     // this.FormTask.push({ name: this.formtask })
-  //     // this.$store.dispatch('addNEWFORM', this.FormTask)
-  //     this.$store.dispatch('showMainForm', this.formtask)
-  //     this.formtask = ''
-  //     // console.log(this.$store.state.taskMainForm)
-  //     this.$store.dispatch('showFORM')
-  //   }
-  // },
   computed: {
     ...mapState([
-      'taskMainForm'
+      'MainForm'
     ])
   }
 }

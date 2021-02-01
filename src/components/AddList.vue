@@ -13,7 +13,7 @@ export default {
   },
   methods: {
     addList () {
-      this.$store.dispatch('showMainForm', ({ title: 'Roman' }))
+      this.$store.dispatch('addMainForm', { title: 'Roman' })
     }
   }
 }

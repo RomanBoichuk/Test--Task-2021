@@ -6,15 +6,15 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     showform: false,
-    taskMainForm: []
+    MainForm: []
   },
   mutations: {
     SHOW_FORM (state) {
       state.showform = !state.showform
     },
-    SHOW_MAINFORM (state, formtask) {
-      state.taskMainForm.push(formtask)
-      console.log(state.taskMainForm)
+    ADD_MAINFORM (state, formtask) {
+      state.MainForm.push(formtask)
+      console.log(state.MainForm)
     },
     ADD_NEWFORM (state, payload) {
       state.formtask = payload
@@ -24,8 +24,8 @@ export default new Vuex.Store({
     showFORM ({ commit }) {
       commit('SHOW_FORM')
     },
-    showMainForm ({ commit }, formtask) {
-      commit('SHOW_MAINFORM', formtask)
+    addMainForm ({ commit }, formtask) {
+      commit('ADD_MAINFORM', formtask)
     },
     addNEWFORM ({ commit }, payload) {
       commit('ADD_NEWFORM', payload)
