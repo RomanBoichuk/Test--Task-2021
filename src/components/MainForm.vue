@@ -1,8 +1,13 @@
 <template>
   <div class="mainForm">
-    <div class="form-plus"></div>
-    <input type="text" placeholder="введіть завдання" v-model='formtask'>
-    <button @click.prevent="addMainform">{{AddForm}}</button>
+    <ul>
+      <li v-for="(title, index) in taskMainForm" v-bind:key="index">
+        {{ title.title }}
+        <div class="form-plus"></div>
+        <input type="text" placeholder="введіть завдання" v-model='formtask'>
+        <button @click.prevent="addMainform">{{AddForm}}</button>
+      </li>
+    </ul>
   </div>
 </template>
 
@@ -16,16 +21,16 @@ export default {
       FormTask: []
     }
   },
-  methods: {
-    addMainform () {
-      // this.FormTask.push({ name: this.formtask })
-      // this.$store.dispatch('addNEWFORM', this.FormTask)
-      this.$store.dispatch('showMainForm', this.formtask)
-      this.formtask = ''
-      // console.log(this.$store.state.taskMainForm)
-      this.$store.dispatch('showFORM')
-    }
-  },
+  // methods: {
+  //   addMainform () {
+  //     // this.FormTask.push({ name: this.formtask })
+  //     // this.$store.dispatch('addNEWFORM', this.FormTask)
+  //     this.$store.dispatch('showMainForm', this.formtask)
+  //     this.formtask = ''
+  //     // console.log(this.$store.state.taskMainForm)
+  //     this.$store.dispatch('showFORM')
+  //   }
+  // },
   computed: {
     ...mapState([
       'taskMainForm'

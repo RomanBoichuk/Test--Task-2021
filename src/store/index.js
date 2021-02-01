@@ -14,6 +14,7 @@ export default new Vuex.Store({
     },
     SHOW_MAINFORM (state, formtask) {
       state.taskMainForm.push(formtask)
+      console.log(state.taskMainForm)
     },
     ADD_NEWFORM (state, payload) {
       state.formtask = payload

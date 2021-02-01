@@ -1,5 +1,5 @@
 <template>
-  <button class="mainButton" @click="showform">
+  <button class="mainButton" @click="addList">
     {{ text }}
   </button>
 </template>
@@ -12,8 +12,8 @@ export default {
     text: String
   },
   methods: {
-    showform () {
-      this.$store.dispatch('showFORM')
+    addList () {
+      this.$store.dispatch('showMainForm', ({ title: 'Roman' }))
     }
   }
 }

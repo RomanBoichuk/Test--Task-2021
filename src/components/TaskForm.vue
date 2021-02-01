@@ -1,5 +1,5 @@
 <template>
-  <div class="mainForm">
+  <div class="taskform">
     <form>
       <ul>
         <li v-for="(task, index) in taskMainForm" v-bind:key="index">
