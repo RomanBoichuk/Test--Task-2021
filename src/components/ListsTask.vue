@@ -1,11 +1,11 @@
 <template>
-  <div class="mainForm">
+  <div class="lists">
     <ul>
-      <li v-for="(title, index) in MainForm" v-bind:key="index">
+      <li v-for="(title, index) in ListsTask" v-bind:key="index">
         {{ title.title }}
         <div class="form-plus"></div>
         <input type="text" placeholder="введіть завдання" v-model='formtask'>
-        <button @click.prevent="addMainform">{{AddTask}}</button>
+        <button @click.prevent="addTask">{{AddTask}}</button>
       </li>
     </ul>
   </div>
@@ -22,7 +22,7 @@ export default {
   },
   computed: {
     ...mapState([
-      'MainForm'
+      'ListsTask'
     ])
   }
 }

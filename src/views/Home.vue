@@ -1,22 +1,22 @@
 <template>
   <div>
-    <MainForm />
-    <AddList :text= "AddTODOlist" />
+    <ListsTask />
+    <AddListButton :text= "AddTODOlist" />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
 
-import AddList from '@/components/AddList.vue'
-import MainForm from '@/components/MainForm.vue'
+import AddListButton from '@/components/AddListButton.vue'
+import ListsTask from '@/components/ListsTask.vue'
 import { mapState } from 'vuex'
 
 export default {
   name: 'Home',
   components: {
-    AddList,
-    MainForm
+    AddListButton,
+    ListsTask
   },
   data () {
     return {

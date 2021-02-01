@@ -7,13 +7,13 @@
 <script>
 
 export default {
-  name: 'AddList',
+  name: 'AddListButton',
   props: {
     text: String
   },
   methods: {
     addList () {
-      this.$store.dispatch('addMainForm', { title: 'Roman' })
+      this.$store.dispatch('addLISTS', { title: 'Roman' })
     }
   }
 }
