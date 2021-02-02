@@ -1,19 +1,27 @@
 <template>
   <div class="lists">
-    <ul>
-      <li v-for="(title, index) in ListsTask" v-bind:key="index">
-        {{ title.title }}
-        <div class="form-plus"></div>
-        <input type="text" placeholder="введіть завдання" v-model='formtask'>
-        <button @click.prevent="addTask">{{AddTask}}</button>
-      </li>
-    </ul>
+    <div v-for="(title, index) in ListsTask" v-bind:key="index">
+      <ListTaskHeader />
+      <TaskForm />
+      <div>
+        <Task />
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
+import ListTaskHeader from '@/components/ListTaskHeader.vue'
+import TaskForm from '@/components/TaskForm.vue'
+import Task from '@/components/Task.vue'
 import { mapState } from 'vuex'
+
 export default {
+  components: {
+    ListTaskHeader,
+    TaskForm,
+    Task
+  },
   data () {
     return {
       AddTask: 'ADD TASK',
