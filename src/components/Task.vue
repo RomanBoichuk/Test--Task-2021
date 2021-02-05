@@ -1,14 +1,22 @@
 <template>
   <div class="task">
-    <div v-bind:class="{done:completed}">
-      <input type="checkbox" @change="completed=!completed">
-      <span></span>
-      <span class="task-text">buy bread</span>
-    </div>
+    <label>
+      <div v-bind:class="{done:completed}">
+        <input type="checkbox" @change="completed=!completed">
+        <span></span>
+        <span
+          class="task-text"
+          ref="element"
+          :contenteditable="editTable"
+          @click="doeditTable"
+          >buy bread
+        </span>
+      </div>
+    </label>
     <div class="task-icon">
       <font-awesome-icon icon="sort"/>
       |
-      <font-awesome-icon icon="pencil-alt"/>
+      <font-awesome-icon icon="pencil-alt" @click="focusSpan"/>
       |
       <font-awesome-icon icon="trash-alt"/>
     </div>
@@ -19,7 +27,17 @@
 export default {
   data () {
     return {
-      completed: false
+      completed: false,
+      editTable: true
+    }
+  },
+  methods: {
+    focusSpan () {
+      this.editTable = true
+      this.$refs.element.focus()
+    },
+    doeditTable () {
+      this.editTable = true
     }
   }
 }
