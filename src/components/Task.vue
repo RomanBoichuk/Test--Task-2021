@@ -17,11 +17,14 @@
 
 <style lang="sass" scoped>
 $black: #404040
+$yellow: #ffe033
 .task
   color: $black
   padding: 15px 10px
   display: flex
   justify-content: space-between
+  :hover &
+    background: $yellow
 .task-icon
   opacity: 0
   .task:hover &
