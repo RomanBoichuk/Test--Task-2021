@@ -1,11 +1,11 @@
 <template>
-  <div class="list--task--header">
+  <div class="list-task-header">
     <div>
       <font-awesome-icon icon="th-list"/>
-      <div class="tasks--title">
+      <div class="tasks-title">
         header here
       </div>
-      <div class="tasks--options">
+      <div class="tasks-options">
         <font-awesome-icon icon="pencil-alt"/>
         |
         <font-awesome-icon icon="trash-alt"/>
@@ -17,11 +17,11 @@
 <style lang="sass" scoped>
 $blueLight: #39B7CD
 $blueDark: #53868B
-.tasks--options
+.tasks-options
   opacity: 0
-  .list--task--header:hover &
+  .list-task-header:hover &
     opacity: 1
-.list--task--header
+.list-task-header
    margin-top: 15px
    border-radius: 2px
    border: 1px solid $blueDark

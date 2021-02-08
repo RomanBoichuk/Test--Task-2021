@@ -1,6 +1,6 @@
 <template>
-  <div class="lists">
-    <div v-for="(title, index) in ListsTask" v-bind:key="index">
+  <div class="lists-of-task">
+    <div v-for="(title, index) in ListsOfTask" v-bind:key="index">
       <ListTaskHeader />
       <TaskForm />
       <div>
@@ -32,11 +32,13 @@ export default {
   },
   computed: {
     ...mapState([
-      'ListsTask'
+      'ListsOfTask'
     ])
   }
 }
 </script>
 
 <style lang="sass">
+.lists-of-task
+  padding: 10%
 </style>

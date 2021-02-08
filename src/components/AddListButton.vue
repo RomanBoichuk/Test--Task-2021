@@ -14,7 +14,7 @@ export default {
   },
   methods: {
     addList () {
-      this.$store.dispatch('addLISTS', { title: 'Roman' })
+      this.$store.dispatch('addLISTSOFTASK', { title: 'Roman' })
     }
   }
 }

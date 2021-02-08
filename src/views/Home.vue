@@ -10,7 +10,6 @@
 
 import AddListButton from '@/components/AddListButton.vue'
 import ListsOfTask from '@/components/ListsOfTask.vue'
-import { mapState } from 'vuex'
 
 export default {
   name: 'Home',
@@ -22,10 +21,7 @@ export default {
     return {
       AddTODOlist: 'ADD TODO LIST'
     }
-  },
-  computed: mapState([
-    'showform'
-  ])
+  }
 }
 </script>
 <style lang="sass">
