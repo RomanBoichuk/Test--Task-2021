@@ -15,6 +15,9 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  background-image: url("../public/img/icons/StarSky.png");
+  padding: 0 0 100% 0;
+  display: block;
 }
 
 #nav {

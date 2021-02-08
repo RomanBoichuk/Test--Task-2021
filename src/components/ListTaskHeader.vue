@@ -22,6 +22,7 @@ $blueDark: #53868B
   .list--task--header:hover &
     opacity: 1
 .list--task--header
+   margin-top: 15px
    border-radius: 2px
    border: 1px solid $blueDark
    box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, .8)

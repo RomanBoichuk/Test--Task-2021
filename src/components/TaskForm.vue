@@ -35,7 +35,7 @@ $green: #004d00
   padding: 0 0 5px 0
 .form-input
   width: 400px
-  margin-left: auto
+  margin-left: 5px
   margin-right: 0px
 .form-button
   width: 100px

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="home">
     <ListsOfTask />
     <AddListButton :text= "AddTODOlist" />
   </div>
@@ -28,3 +28,5 @@ export default {
   ])
 }
 </script>
+<style lang="sass">
+</style>

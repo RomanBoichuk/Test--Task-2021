@@ -1,6 +1,5 @@
 <template>
   <div class="task">
-    <label>
       <div v-bind:class="{done:completed}">
         <input type="checkbox" @change="completed=!completed">
         <span></span>
@@ -12,7 +11,6 @@
           >buy bread
         </span>
       </div>
-    </label>
     <div class="task-icon">
       <font-awesome-icon icon="sort"/>
       |
@@ -46,14 +44,18 @@ export default {
 <style lang="sass" scoped>
 $black: #404040
 $yellow: #ffe033
+$white: #ffffff
 .task
-  border: 1px solid $black
+  border: 1px solid $white
   color: $black
   padding: 15px 10px
   display: flex
+  background: $white
   justify-content: space-between
-  :hover &
+  &:hover
     background: $yellow
+  &:last-child
+    border-radius: 0 0 10px 10px
 .task-icon
   opacity: 0
   .task:hover &

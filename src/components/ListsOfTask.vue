@@ -5,6 +5,8 @@
       <TaskForm />
       <div>
         <Task />
+        <Task />
+        <Task />
       </div>
     </div>
   </div>
@@ -35,3 +37,6 @@ export default {
   }
 }
 </script>
+
+<style lang="sass">
+</style>
