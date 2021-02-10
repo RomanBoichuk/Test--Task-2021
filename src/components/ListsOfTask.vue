@@ -4,7 +4,7 @@
       <ListTaskHeader />
       <TaskForm />
       <div v-for="(title,index) in TaskInput" v-bind:key="index">
-        <Task :texttask = title.task />
+        <Task :texttask = title.task :taskIndex = index />
       </div>
     </div>
   </div>

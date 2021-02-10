@@ -14,6 +14,10 @@ export default new Vuex.Store({
     },
     ADD_NEW_TASK (state, payload) {
       state.TaskInput.push(payload)
+      console.log(state.TaskInput)
+    },
+    REMOVE_TASK (state, index) {
+      state.TaskInput.splice(index, 1)
     }
   },
   actions: {
@@ -22,6 +26,9 @@ export default new Vuex.Store({
     },
     addNEWTASK ({ commit }, payload) {
       commit('ADD_NEW_TASK', payload)
+    },
+    removeTask ({ commit }, index) {
+      commit('REMOVE_TASK', index)
     }
   },
   modules: {

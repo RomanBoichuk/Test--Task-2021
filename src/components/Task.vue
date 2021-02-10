@@ -16,12 +16,13 @@
       |
       <font-awesome-icon icon="pencil-alt" @click="focusSpan"/>
       |
-      <font-awesome-icon icon="trash-alt"/>
+      <font-awesome-icon icon="trash-alt"  @click="removeTask({taskIndex})"/>
     </div>
   </div>
 </template>
 
 <script>
+import { mapState } from 'vuex'
 
 export default {
   data () {
@@ -31,7 +32,8 @@ export default {
     }
   },
   props: {
-    texttask: String
+    texttask: String,
+    taskIndex: Number
   },
   methods: {
     focusSpan () {
@@ -40,7 +42,17 @@ export default {
     },
     doeditTable () {
       this.editTable = true
+    },
+    removeTask (taskIndex) {
+      console.log(1223)
+      console.log(this.taskIndex)
+      this.$store.dispatch('removeTask', this.taskIndex)
     }
+  },
+  computed: {
+    ...mapState([
+      'TaskInput'
+    ])
   }
 }
 </script>
