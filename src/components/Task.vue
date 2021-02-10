@@ -8,7 +8,7 @@
           ref="element"
           :contenteditable="editTable"
           @click="doeditTable"
-          >buy bread
+          >{{ texttask }}
         </span>
       </div>
     <div class="task-icon">
@@ -22,12 +22,16 @@
 </template>
 
 <script>
+
 export default {
   data () {
     return {
       completed: false,
       editTable: true
     }
+  },
+  props: {
+    texttask: String
   },
   methods: {
     focusSpan () {

@@ -3,10 +3,8 @@
     <div v-for="(title, index) in ListsOfTask" v-bind:key="index">
       <ListTaskHeader />
       <TaskForm />
-      <div>
-        <Task />
-        <Task />
-        <Task />
+      <div v-for="(title,index) in TaskInput" v-bind:key="index">
+        <Task :texttask = title.task />
       </div>
     </div>
   </div>
@@ -32,7 +30,8 @@ export default {
   },
   computed: {
     ...mapState([
-      'ListsOfTask'
+      'ListsOfTask',
+      'TaskInput'
     ])
   }
 }

@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <ListsOfTask />
-    <AddListButton :text= "AddTODOlist" />
+    <AddListButton :text= "AddTODOlist" @click="show = !show"/>
   </div>
 </template>
 
